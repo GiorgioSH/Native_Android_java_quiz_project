@@ -1,5 +1,6 @@
 package com.ita.filmquiz;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,5 +23,14 @@ public class CheatActivity extends AppCompatActivity {
         Question question = (Question)intent.getSerializableExtra(MainActivity.KEY_QUESTION);
 
         tvReponse.setText(String.format("%s : %s", question.getText(), question.getAnswer()));
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

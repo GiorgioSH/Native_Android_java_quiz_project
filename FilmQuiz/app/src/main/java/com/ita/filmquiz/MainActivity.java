@@ -143,8 +143,6 @@ import java.util.List;
 
                 int duration = Toast.LENGTH_SHORT;
 
-
-                //tvScore.setText("1");
                 if(question.getAnswer()){
                     CharSequence text = "Bien Joué !";
                     Toast toast = Toast.makeText(context, text, duration);
@@ -154,7 +152,6 @@ import java.util.List;
                     CharSequence text = "perdu !";
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
-
                 }
 
                 tvScore.setText(result.toString());
@@ -169,8 +166,6 @@ import java.util.List;
                     question = questions.get(index);
                     tvQuestion.setText(question.getText());
                 }
-                //question = questions.get(index);
-                //tvQuestion.setText(question.getText());
             }
         });
 

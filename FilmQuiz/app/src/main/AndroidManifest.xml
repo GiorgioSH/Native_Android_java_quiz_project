@@ -11,6 +11,7 @@
         android:theme="@style/Theme.FilmQuiz">
         <activity
             android:name=".CheatActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
